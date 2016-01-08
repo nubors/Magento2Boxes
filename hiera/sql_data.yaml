@@ -1,0 +1,81 @@
+---
+vagrantfile:
+    vm:
+        network:
+            forwarded_port:
+                vflnp_hhcve3z78ipp:
+                    host: '8913'
+                    guest: '22'
+                public_mysql_sf654ASD:
+                    host: '3306'
+                    guest: '3306'
+    ssh:
+        host: null
+        port: null
+        private_key_path: null
+        username: vagrant
+        guest_port: null
+        keep_alive: true
+        forward_agent: false
+        forward_x11: false
+        shell: 'bash -l'
+        insert_key: false
+mariadb:
+    install: '0'
+    settings:
+        version: '10.1'
+        root_password: 'toor'
+        override_options: {  }
+    adminer: 0
+    users:
+        mariadbnu_7055grdu4dbk:
+            name: dbuser
+            password: 'toor'
+    databases:
+        mariadbnd_3xu3solh9i7y:
+            name: dbname
+            sql: ''
+    grants:
+        mariadbng_m3dn7r6j5bow:
+            user: dbuser
+            table: '*.*'
+            privileges:
+                - ALL
+mysql:
+    install: '1'
+    settings:
+        version: '5.6'
+        root_password: 'toor'
+        override_options: {  }
+    adminer: 0
+    users:
+        mysqlnu_jspji7sxrh9k:
+            name: dbuser@%
+            password: 'toor'
+    databases:
+        mysqlnd_wu5w1imkjbij:
+            name: magento2
+            sql: ''
+    grants:
+        mysqlng_4mvu1v4qaiux:
+            user: dbuser@%
+            table: '*.*'
+            privileges:
+                - ALL
+postgresql:
+    install: '0'
+    settings:
+        global:
+            encoding: UTF8
+            version: '9.4'
+        server:
+            postgres_password: '123'
+    databases: {  }
+    users: {  }
+    grants: {  }
+    adminer: 0
+sqlite:
+    install: '0'
+    adminer: 0
+    databases: {  }
+...

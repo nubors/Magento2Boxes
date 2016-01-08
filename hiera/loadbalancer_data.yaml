@@ -1,0 +1,23 @@
+---
+vagrantfile:
+    ssh:
+        host: null
+        port: null
+        private_key_path: null
+        username: vagrant
+        guest_port: null
+        keep_alive: true
+        forward_agent: false
+        forward_x11: false
+        shell: 'bash -l'
+        insert_key: false
+haproxy:
+    install: '1'
+    boxes:
+        - config:
+            server_name: magento2-01
+            ip: 192.168.56.102
+    stats:
+        username: 'haproxy'
+        password: 'password'
+...

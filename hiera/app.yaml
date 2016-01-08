@@ -1,0 +1,13 @@
+---
+:backends: yaml
+:yaml:
+    :datadir: '/vagrant/puphpet/boxes/Magento2/hiera'
+:hierarchy:
+    - app_data
+    - php_data
+    - nginx_data
+    - hhvm_data
+    - common_data
+:merge_behavior: deeper
+:logger: console
+...

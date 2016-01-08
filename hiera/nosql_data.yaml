@@ -1,0 +1,15 @@
+---
+mongodb:
+    install: '0'
+    settings:
+        auth: 1
+        bind_ip: 127.0.0.1
+        port: '27017'
+    globals:
+        version: 2.6.0
+    databases: {  }
+redis:
+    install: '0'
+    settings:
+        conf_port: '6379'
+...

@@ -1,0 +1,69 @@
+vagrantfile:
+    target: local
+    vm:
+        box: puphpet/ubuntu1404-x64
+        box_url: puphpet/ubuntu1404-x64
+        hostname: magento2-01
+        memory: '1024'
+        cpus: '2'
+        chosen_provider: virtualbox
+        network:
+            private_network: 192.168.56.102
+            forwarded_port:
+                asdfasdfasdfasdfsd:
+                    host: '8913'
+                    guest: '22'
+        post_up_message: 'Magento2 API provider is up and running... Hopefully... :D'
+        provider:
+            virtualbox:
+                modifyvm:
+                    natdnshostresolver1: 'on'
+                    name: 'magento2-01'
+                showgui: '0'
+            vmware:
+                numvcpus: 1
+            parallels:
+                cpus: 1
+        provision:
+            puppet:
+                manifests_path: puphpet/puppet/manifests
+                module_path: puphpet/puppet/modules
+                options:
+                    - '--verbose'
+                    - '--hiera_config /vagrant/puphpet/boxes/Magento2/hiera/magento2.yaml'
+        synced_folder:
+            vflsf_py36dwjwk5ia:
+                source: ./
+                target: /var/www
+                sync_type: default
+                smb:
+                    smb_host: ''
+                    smb_username: ''
+                    smb_password: ''
+                rsync:
+                    args:
+                        - '--verbose'
+                        - '--archive'
+                        - '-z'
+                    exclude:
+                        - .vagrant/
+                        - .git/
+                    auto: 'true'
+                owner: www-data
+                group: www-data
+        usable_port_range:
+            start: 10200
+            stop: 10500
+    ssh:
+        host: null
+        port: null
+        private_key_path: null
+        username: vagrant
+        guest_port: null
+        keep_alive: true
+        forward_agent: false
+        forward_x11: false
+        shell: 'bash -l'
+        insert_key: false
+    vagrant:
+        host: detect

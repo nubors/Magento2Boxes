@@ -1,0 +1,37 @@
+---
+vagrantfile:
+    ssh:
+        host: null
+        port: null
+        private_key_path: null
+        username: vagrant
+        guest_port: null
+        keep_alive: true
+        forward_agent: false
+        forward_x11: false
+        shell: 'bash -l'
+        insert_key: false
+magento2:
+    install: '1'
+    # If you replace source, make sure it is an .tar.bz2 archive
+    source_tar_bz2: 'http://the-shop.io/downloads/Magento2.tar.bz2'
+    destination: '/var/www/ProjectCode/Magento2'
+    user: 'www-data'
+    group: 'www-data'
+    install_data:
+        db_host: 192.168.56.101
+        db_name: magento2
+        db_user: dbuser
+        db_pass: toor
+        admin_password: admin12345
+        admin_email: admin@magento.com
+        admin_firstname: Admin
+        admin_lastname: Local
+        admin_username: admin
+        backend_frontname: admin
+        # Initial vagrant up command will fail if you don't set this with own data
+        # Go to https://www.magentocommerce.com/magento-connect/customerdata/secureKeys/list/ to obtain needed
+        # public / private keys
+        magento_connect_public_key: YOUR_PUBLIC_KEY
+        magento_connect_private_key: YOUR_PRIVATE_KEY
+...
