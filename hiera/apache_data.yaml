@@ -14,7 +14,7 @@ apache:
     vhosts:
         av_zwn63be5xxp6:
             servername: magento2.dev
-            docroot: /var/www/ProjectCode/Magento2/pub
+            docroot: /var/www/BoxData/Magento2/pub
             port: '80'
             setenv:
                 - 'APP_ENV dev'
