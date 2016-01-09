@@ -22,6 +22,8 @@ If you wish to add Magento 2 box to load balancer rotation, you'll need to modif
 `hiera/loadbalancer_data.yaml`. If you wish to add load balancing in front of anything else, you'll need to 
 create new load balancer box with own setup.
 
+When adding load balancers, it's important that it matches `/^*loadbalancer$/` regex.
+
 ## IMPORTANT
 **For now, this is intended for local setup only, there might be security implications if used on production 
 so please DO NOT USE THIS ON PRODUCTION.**
