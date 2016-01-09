@@ -3,12 +3,12 @@ vagrantfile:
     vm:
         box: puphpet/ubuntu1404-x64
         box_url: puphpet/ubuntu1404-x64
-        hostname: loadbalancer
+        hostname: magento-loadbalancer
         memory: '256'
         cpus: '1'
         chosen_provider: virtualbox
         network:
-            private_network: 192.168.56.100
+            private_network: 192.168.56.120
             forwarded_port:
                 asdfasdfasdfasdfsd:
                     host: '8913'
@@ -18,7 +18,7 @@ vagrantfile:
             virtualbox:
                 modifyvm:
                     natdnshostresolver1: 'on'
-                    name: 'loadbalancer'
+                    name: 'magento-loadbalancer'
                 showgui: '0'
             vmware:
                 numvcpus: 1

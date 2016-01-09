@@ -3,12 +3,12 @@ vagrantfile:
     vm:
         box: puphpet/ubuntu1404-x64
         box_url: puphpet/ubuntu1404-x64
-        hostname: database
+        hostname: magento-database
         memory: '1024'
         cpus: '1'
         chosen_provider: virtualbox
         network:
-            private_network: 192.168.56.101
+            private_network: 192.168.56.121
             forwarded_port:
                 vflnp_hhcve3z78ipp:
                     host: '8913'
@@ -21,7 +21,7 @@ vagrantfile:
             virtualbox:
                 modifyvm:
                     natdnshostresolver1: 'on'
-                    name: 'database'
+                    name: 'magento-database'
                 showgui: '0'
             vmware:
                 numvcpus: 1

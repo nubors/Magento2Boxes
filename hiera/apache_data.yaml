@@ -13,7 +13,7 @@ apache:
         - rewrite
     vhosts:
         av_zwn63be5xxp6:
-            servername: magento2.api.provider
+            servername: magento2.dev
             docroot: /var/www/ProjectCode/Magento2/pub
             port: '80'
             setenv:

@@ -16,7 +16,7 @@ haproxy:
     boxes:
         - config:
             server_name: magento2-01
-            ip: 192.168.56.102
+            ip: 192.168.56.122
     stats:
         username: 'haproxy'
         password: 'password'
