@@ -2,7 +2,7 @@
 This repository contains YAML files that define minimal VM setup for load balancer followed by Magento 2 installation. 
 
 Note: Contents of this repository are intended to be used with 
-[multi box vagrant with puppet setup we provide](https://github.com/the-shop/Vagrant) only.
+[multi box vagrant with puppet setup we provide](https://github.com/the-shop/STARCommerce) only.
 
 ## Flow
 Vagrant iterates over all files that match following `*.yaml` and presumes they are the definitions of VMs.
