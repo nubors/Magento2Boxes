@@ -13,8 +13,8 @@ apache:
         - rewrite
     vhosts:
         av_zwn63be5xxp6:
-            servername: magento2.dev
-            docroot: /var/www/BoxData/Magento2/pub
+            servername: magento2distributed.dev
+            docroot: /var/www/BoxData/Magento2distributed/pub
             port: '80'
             setenv:
                 - 'APP_ENV dev'
