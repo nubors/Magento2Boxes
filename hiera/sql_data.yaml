@@ -58,7 +58,7 @@ mysql:
             password: 'toor'
     databases:
         mysqlnd_wu5w1imkjbij:
-            name: magento2
+            name: magento2distributed
             sql: ''
     grants:
         mysqlng_4mvu1v4qaiux:
