@@ -13,7 +13,7 @@ nginx:
     vhosts:
         nxv_y5wrmfxt2una:
             server_name: star.commerce.dev
-            www_root: /var/www/ProjectCode/SCFrontend/public
+            www_root: /var/www/BoxData/SCFrontend/public
             listen_port: '80'
             index_files:
                 - index.php

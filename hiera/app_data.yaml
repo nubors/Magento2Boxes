@@ -11,11 +11,4 @@ vagrantfile:
         forward_x11: false
         shell: 'bash -l'
         insert_key: false
-git_clone:
-    install: '1'
-    repositories:
-        - value:
-            destination: '/var/www/ProjectCode/SCFrontend'
-            source: 'https://github.com/the-shop/STARCommerceFrontend.git'
-            revision: 'master'
 ...

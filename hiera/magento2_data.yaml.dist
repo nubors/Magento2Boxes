@@ -15,7 +15,7 @@ magento2:
     install: '1'
     # If you replace source, make sure it is an .tar.bz2 archive
     source_tar_bz2: 'http://the-shop.io/downloads/Magento2.tar.bz2'
-    destination: '/var/www/ProjectCode/Magento2distributed'
+    destination: '/var/www/BoxData/Magento2distributed'
     user: 'www-data'
     group: 'www-data'
     install_data:
