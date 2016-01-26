@@ -32,6 +32,6 @@ magento2:
         # Initial vagrant up command will fail if you don't set this with own data
         # Go to https://www.magentocommerce.com/magento-connect/customerdata/secureKeys/list/ to obtain needed
         # public / private keys
-        magento_connect_public_key: YOUR_PUBLIC_KEY
-        magento_connect_private_key: YOUR_PRIVATE_KEY
+        magento_connect_public_key:
+        magento_connect_private_key:
 ...
